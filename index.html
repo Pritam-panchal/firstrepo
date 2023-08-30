@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        [class*="col-"] {
+            float: left;
+        }
+
+        .box img {
+            width: 100%;
+            height: auto;
+            padding: 3px 10px;
+        }
+
+        @media screen and (max-width:700px) {
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25.0%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50.0%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75.0%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100.0%;
+            }
+
+            .navitem {
+                display: none;
+            }
+
+            .first_img h5 p {
+                display: none;
+            }
+
+        }
+
+        @media screen and (min-width:700px) {
+            .col-t-1 {
+                width: 8.33%;
+            }
+
+            .col-t-2 {
+                width: 16.66%;
+            }
+
+            .col-t-3 {
+                width: 25.0%;
+            }
+
+            .col-t-4 {
+                width: 33.33%;
+            }
+
+            .col-t-5 {
+                width: 41.66%;
+            }
+
+            .col-t-6 {
+                width: 50.0%;
+            }
+
+            .col-t-7 {
+                width: 58.33%;
+            }
+
+            .col-t-8 {
+                width: 66.66%;
+            }
+
+            .col-t-9 {
+                width: 75.0%;
+            }
+
+            .col-t-10 {
+                width: 83.33%;
+            }
+
+            .col-t-11 {
+                width: 91.66%;
+            }
+
+            .col-t-12 {
+                width: 100.0%;
+            }
+
+        }
+
+        @media screen and (min-width:1000px) {
+            .col-c-1 {
+                width: 8.33%;
+            }
+
+            .col-c-2 {
+                width: 16.66%;
+            }
+
+            .col-c-3 {
+                width: 25.0%;
+            }
+
+            .col-c-4 {
+                width: 33.33%;
+            }
+
+            .col-c-5 {
+                width: 41.66%;
+            }
+
+            .col-c-6 {
+                width: 50.0%;
+            }
+
+            .col-c-7 {
+                width: 58.33%;
+            }
+
+            .col-c-8 {
+                width: 66.66%;
+            }
+
+            .col-c-9 {
+                width: 75.0%;
+            }
+
+            .col-c-10 {
+                width: 83.33%;
+            }
+
+            .col-c-11 {
+                width: 91.66%;
+            }
+
+            .col-c-12 {
+                width: 100.0%;
+            }
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .first_img {
+            position: relative;
+        }
+
+        .first_img h5 {
+            font-size: 35px;
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 400;
+        }
+
+        .first_img h5 b {
+            background-color: rgba(0, 0, 0, .9);
+            padding: 8px 16px;
+        }
+
+        header {
+            letter-spacing: 4px;
+        }
+
+        nav {
+            padding: 15px 30px 20px 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            margin-left: 30px;
+        }
+
+        header img,
+        .last_img img {
+            width: 100%;
+            height: auto;
+            box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.26), 2px 0 10px 0 rgba(0, 0, 0, 0.12);
+
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .project_text,
+        .about_text,
+        .contact_text {
+            padding: 32px 16px;
+            margin: 8px 20px;
+            font-size: 24px;
+            font-family: "Segoe UI", Arial, sans-serif
+        }
+
+        .pic,
+        .pic2 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 10px 20px;
+        }
+
+        .about_con .paragraph p {
+            margin: 0px 20px;
+            padding: 0px 16px;
+        }
+
+        .img_con {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 10px 20px;
+        }
+
+        .img_con .box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box h3,
+        p {
+            padding: 8px;
+        }
+
+        .img_con .box button {
+            padding: 8px;
+            margin: 10px;
+            border: none;
+            font-size: 15px;
+        }
+
+        .img_con .box button:hover {
+            background-color: gray;
+            cursor: pointer;
+        }
+
+        .pic .box img,
+        .pic2 .box img {
+            position: relative;
+        }
+
+        .pic .box h6,
+        .pic2 .box h6 {
+            position: absolute;
+            z-index: 2;
+            padding: 8px 13px;
+            color: white;
+            background-color: black;
+            margin: 3px 10px;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        hr {
+            margin-top: 10px;
+            border-color: rgba(0, 0, 0, .3);
+        }
+
+        .contact_con {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item {
+            margin: 10px 20px;
+        }
+
+        input {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            margin: 10px;
+            font-size: 15px;
+            border: 1px solid gray;
+        }
+
+        .item .box button {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+        }
+
+        .last_img {
+            padding: 30px 30px 10px 30px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .un {
+            text-decoration: underline;
+        }
+    </Style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="lable">
+                <a href=""><b>BR </b> Architects</a>
+            </div>
+            <div class="navitem">
+                <a href="">Projects</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </div>
+        </nav>
+        <div class="first_img">
+            <h5><b>BR</b>
+                <p>Architects</p>
+            </h5>
+            <img src="https://www.w3schools.com/w3images/architect.jpg" alt="">
+        </div>
+    </header>
+    <div class="project_con">
+        <div class="project_text">Projects <br>
+            <hr>
+        </div>
+        <div class="pic">
+            <div class="box col-12 col-t-6 col-c-3">
+                <h6>Summer House</h6>
+                <img src="https://www.w3schools.com/w3images/house5.jpg" alt="">
+            </div>
+            <div class="box col-12 col-t-6 col-c-3">
+                <h6>Brick House</h6>
+                <img src="https://www.w3schools.com/w3images/house4.jpg" alt="">
+            </div>
+            <div class="box col-12 col-t-6 col-c-3">
+                <h6>Renovated</h6>
+                <img src="https://www.w3schools.com/w3images/house3.jpg" alt="">
+            </div>
+            <div class="box col-12 col-t-6 col-c-3">
+                <h6>Barn House</h6>
+                <img class="col-12 col-t-6 col-c-3" src="https://www.w3schools.com/w3images/house2.jpg" alt="">
+            </div>
+        </div>
+        <div class="pic2">
+            <div class="box col-12 col-t-6 col-c-3">
+                <h6>Summer House</h6>
+                <img src="https://www.w3schools.com/w3images/house2.jpg" alt="">
+            </div>
+            <div class="box col-12 col-t-6 col-c-3">
+                <h6>Brick House</h6>
+                <img src="https://www.w3schools.com/w3images/house3.jpg" alt="">
+            </div>
+            <div class="box col-12 col-t-6 col-c-3">
+                <h6>Renovated</h6>
+                <img src="https://www.w3schools.com/w3images/house5.jpg" alt="">
+            </div>
+            <div class="box col-12 col-t-6 col-c-3">
+                <h6>Barn House</h6>
+                <img src="https://www.w3schools.com/w3images/house4.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+    <div class="about_con">
+        <div class="about_text">About <br>
+            <hr>
+        </div>
+        <div class="paragraph">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="img_con">
+            <div class="box col-12 col-t-6 col-c-3">
+                <img src="https://www.w3schools.com/w3images/team2.jpg" alt="">
+                <h3>John Doe</h3>
+                <p class="mid">CEO & Founder</p>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum. </p>
+                <button>Contact</button>
+            </div>
+            <div class="box col-12 col-t-6 col-c-3">
+                <img src="https://www.w3schools.com/w3images/team1.jpg" alt="">
+                <h3>Jane Doe</h3>
+                <p class="mid">Architect</p>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum. </p>
+                <button>Contact</button>
+            </div>
+            <div class="box col-12 col-t-6 col-c-3">
+                <img src="https://www.w3schools.com/w3images/team3.jpg" alt="">
+                <h3>Mike Ross</h3>
+                <p class="mid">Architect</p>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum. </p>
+                <button>Contact</button>
+            </div>
+            <div class="box col-12 col-t-6 col-c-3">
+                <img src="https://www.w3schools.com/w3images/team4.jpg" alt="">
+                <h3>Dan Star</h3>
+                <p class="mid">Architect</p>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum. </p>
+                <button>Contact</button>
+            </div>
+        </div>
+    </div>
+    <div class="contact_con">
+        <div class="contact_text">Contact <br>
+            <hr>
+        </div>
+        <div class="item">
+            <div class="box">
+                <p>Lets get in touch and talk about your next project.</p>
+            </div>
+            <div class="box">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="box">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="box">
+                <input type="text" placeholder="Subject">
+            </div>
+            <div class="box">
+                <input type="text" placeholder="Comments">
+            </div>
+            <div class="box">
+                <button>SEND MESSAGE</button>
+            </div>
+        </div>
+        <div class="last_img">
+            <img src="https://www.w3schools.com/w3images/map.jpg" alt="">
+        </div>
+        <footer>
+            <p>Powered by
+            <p class="un">w3.css</p>
+            </p>
+        </footer>
+</body>
+
+</html>
